@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   bf1942:
-    image: bf1942:latest
+    image: sjkp/bf1942
     command: sh -c "/start.sh"
     ports:
       - 14567:14567/udp # Server
@@ -13,5 +13,9 @@ services:
       - bf1942-mods:/bf1942/mods/ # Persistent mods directory
     environment:
       BFSM: "yes"
+      SERVER_NAME: "NEWSERVER"
+      SERVER_PASSWORD: "test"
+      SERVER_MESSAGE: ""
+      ADMIN_PASSWORD: "test"    
 volumes:
   bf1942-mods:

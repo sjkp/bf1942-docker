@@ -38,3 +38,8 @@ Reset mods folder (admins, mods, maps, settings, etc.)
 ```
 docker-compose down --volumes
 ```
+
+Deployment 
+```
+az deployment group create --resource-group bf42 --template-file  .\deployment\azure\main.bicep
+```
